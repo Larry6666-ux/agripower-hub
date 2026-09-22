@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agri-Power Hub — Solar-Powered Village Processing for Smallholder Farmers</title>
+<meta name="description" content="Agri-Power Hub builds solar-powered, pay-per-use cassava processing hubs inside farming villages in Nigeria — cutting diesel costs for smallholder farmers.">
+<style>
+:root{--green:#1a5c2e;--deep:#0e3b21;--mint:#eef5f0;--amber:#e8a13d;--ink:#1a1a1a;--grey:#5a5a5a}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;color:var(--ink);line-height:1.6;background:#fff}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+nav{position:sticky;top:0;background:var(--deep);z-index:50;box-shadow:0 2px 10px rgba(0,0,0,.15)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+.logo{color:#fff;font-weight:800;font-size:1.15rem;letter-spacing:.4px}
+.logo span{color:var(--amber)}
+.navlinks{display:flex;gap:22px}
+.navlinks a{color:#cfe6d5;text-decoration:none;font-size:.92rem;font-weight:600}
+.navlinks a:hover{color:#fff}
+#burger{display:none;background:none;border:none;color:#fff;font-size:1.5rem;cursor:pointer}
+.hero{background:linear-gradient(135deg,var(--deep),var(--green));color:#fff;padding:78px 0 66px}
+.hero h1{font-size:2.5rem;line-height:1.15;margin-bottom:16px}
+.hero p.lead{font-size:1.15rem;color:#cfe6d5;max-width:640px;margin-bottom:26px}
+.btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 24px;border-radius:8px;font-weight:700;text-decoration:none;font-size:.95rem}
+.btn-a{background:var(--amber);color:var(--deep)}
+.btn-b{border:2px solid #fff;color:#fff}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:44px}
+.stat{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:18px 14px;text-align:center}
+.stat b{display:block;font-size:1.55rem;color:var(--amber)}
+.stat span{font-size:.82rem;color:#cfe6d5}
+section{padding:64px 0}
+section.alt{background:var(--mint)}
+h2.sec{font-size:1.8rem;color:var(--deep);margin-bottom:8px}
+p.sub{color:var(--grey);max-width:680px;margin-bottom:34px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.card{background:#fff;border-radius:14px;padding:26px 22px;box-shadow:0 4px 18px rgba(14,59,33,.08);border-top:5px solid var(--green)}
+.card.b{border-top-color:var(--amber)}
+.card h3{color:var(--green);font-size:1.08rem;margin-bottom:8px}
+.card p{font-size:.94rem;color:#444}
+.flow{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:10px}
+.step{background:var(--deep);color:#fff;border-radius:10px;padding:16px 12px;text-align:center;font-weight:700;font-size:.9rem}
+.step small{display:block;font-weight:400;color:#cfe6d5;font-size:.78rem;margin-top:6px}
+.tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.titem{background:#fff;border-radius:12px;padding:22px;text-align:center;box-shadow:0 4px 16px rgba(14,59,33,.08)}
+.titem b{display:block;font-size:1.4rem;color:var(--green)}
+.titem span{font-size:.86rem;color:var(--grey)}
+.team{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.member{display:flex;gap:16px;background:#fff;border-radius:14px;padding:24px;box-shadow:0 4px 18px rgba(14,59,33,.08)}
+.avatar{width:62px;height:62px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.25rem;flex-shrink:0}
+.member h3{font-size:1.05rem;color:var(--deep)}
+.member .role{color:var(--amber);font-weight:700;font-size:.85rem;margin:2px 0 8px}
+.member p{font-size:.88rem;color:#444}
+.appcard{background:linear-gradient(135deg,var(--green),var(--deep));color:#fff;border-radius:16px;padding:34px 28px;display:flex;flex-wrap:wrap;gap:22px;align-items:center;justify-content:space-between}
+.appcard h3{font-size:1.35rem;margin-bottom:6px}
+.appcard p{color:#cfe6d5;font-size:.94rem;max-width:520px}
+footer{background:var(--deep);color:#cfe6d5;padding:34px 0;font-size:.88rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center}
+footer a{color:var(--amber);text-decoration:none;font-weight:600}
+@media(max-width:760px){
+ .navlinks{display:none;position:absolute;top:62px;left:0;right:0;background:var(--deep);flex-direction:column;padding:14px 22px;gap:14px}
+ .navlinks.open{display:flex}
+ #burger{display:block}
+ .hero h1{font-size:1.8rem}
+ .stats{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+<base target="_blank">
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="logo">AGRI<span>-POWER</span> HUB</div>
+    <button id="burger" onclick="document.getElementById('nl').classList.toggle('open')">☰</button>
+    <div class="navlinks" id="nl">
+      <a href="#problem">The Problem</a><a href="#model">The Model</a><a href="#pilot">The Pilot</a>
+      <a href="#traction">Traction</a><a href="#platform">Platform</a><a href="#team">Team</a><a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>Solar-powered processing hubs,<br>inside the village.</h1>
+    <p class="lead">Agri-Power Hub builds pay-per-use cassava processing hubs for smallholder farmers in Nigeria — no diesel, no long journeys, no machines to buy. Farmers pay per kilogram processed, and keep more of what they grow.</p>
+    <div class="btns">
+      <a class="btn btn-a" href="#contact">Work With Us</a>
+      <a class="btn btn-b" href="#platform">See the Platform</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>40–60%</b><span>of processing income consumed by diesel — the burden we remove</span></div>
+      <div class="stat"><b>25+</b><span>farmers in our discovery network across Edo State</span></div>
+      <div class="stat"><b>₦1.012M</b><span>prototype delivered &amp; reconciled to receipts</span></div>
+      <div class="stat"><b>2 t/day</b><span>design capacity of the first commercial hub</span></div>
+    </div>
+  </div>
+</header>
+
+<section id="problem">
+  <div class="wrap">
+    <h2 class="sec">The Problem, In Farmers' Own Numbers</h2>
+    <p class="sub">We did not read this in a report. We sat with more than 25 smallholder farmers in Edo State and counted their costs, line by line.</p>
+    <div class="cards">
+      <div class="card"><h3>Diesel eats the margin</h3><p>Diesel-powered processing consumes 40–60% of a farmer's processing income — and price swings erase what is left.</p></div>
+      <div class="card"><h3>Distance kills the crop</h3><p>The nearest mechanised processors sit 20–30 km away. Fresh cassava perishes within 2–3 days, forcing distress sales to middlemen.</p></div>
+      <div class="card"><h3>Equipment is out of reach</h3><p>A grater–press set is unaffordable for a smallholder household, so farmers never escape the diesel-mill dependency.</p></div>
+      <div class="card b"><h3>Women carry the load</h3><p>Women do most of the processing — and the travel, and the waiting. They pay the highest cost per naira earned.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="model" class="alt">
+  <div class="wrap">
+    <h2 class="sec">The Model: Pay As You Process</h2>
+    <p class="sub">A solar-powered hub inside the village. Farmers bring their cassava and pay a small fee per kilogram — like the pay-as-you-go they already use for phone credit.</p>
+    <div class="flow">
+      <div class="step">HARVEST<small>farmer brings fresh cassava</small></div>
+      <div class="step">WEIGH &amp; BOOK<small>posted per-kg tariff, recorded</small></div>
+      <div class="step">PROCESS<small>washed, grated, pressed — solar powered</small></div>
+      <div class="step">MARKET<small>transparent prices, buyer access</small></div>
+      <div class="step">EARN<small>farmer keeps the product and the margin</small></div>
+    </div>
+  </div>
+</section>
+
+<section id="pilot">
+  <div class="wrap">
+    <h2 class="sec">The Pilot: Evbuwa, Edo State</h2>
+    <p class="sub">Our first production hub is scoped for Evbuwa community — 2 tonnes/day design capacity, connected to the community mini-grid, so every tonne processed is also the daytime electricity demand that keeps rural grids alive.</p>
+    <div class="cards">
+      <div class="card"><h3>Honest cost</h3><p>A full commercial hub is a ₦30–40M investment (mini-grid powered). We deploy in phases, proving utilisation before we scale.</p></div>
+      <div class="card"><h3>Built to replicate</h3><p>The model is documented as an open playbook so farmer cooperatives can operate hubs — infrastructure designed to outgrow its founder.</p></div>
+      <div class="card"><h3>Measured from day one</h3><p>Energy cost per tonne, farmers served, income change, diesel displaced — our first GRI-structured impact report is in production.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="traction" class="alt">
+  <div class="wrap">
+    <h2 class="sec">What Exists Today</h2>
+    <p class="sub">Said plainly, because records are reputation.</p>
+    <div class="tgrid">
+      <div class="titem"><b>₦1,012,000</b><span>working prototype — ₦950k First Place grant (Seplat/NNPC YEP 2026) + ₦62k founder funds, reconciled to receipts</span></div>
+      <div class="titem"><b>First Place 2026</b><span>Seplat/NNPC Youth Entrepreneurship Programme — national win; Seplat YEP Fellow</span></div>
+      <div class="titem"><b>RC 9720864</b><span>incorporated July 2026 — Agri-Power Hub Ltd, IP held in the company</span></div>
+      <div class="titem"><b>200+ students</b><span>mentored in digital &amp; financial skills through our free scholarship-guidance initiative</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="platform">
+  <div class="wrap">
+    <div class="appcard">
+      <div>
+        <h3>AgroLight OS — the digital layer</h3>
+        <p>A platform MVP connecting farmers, processors, transporters and buyers with integrated payments — built and tested end-to-end across all five roles. An AI advisory layer for basic phones and local languages is in development. First farmers onboard with the Evbuwa pilot.</p>
+      </div>
+      <a class="btn btn-a" href="https://agrolight-frontend.onrender.com/" target="_blank" rel="noopener">Open the Platform</a>
+    </div>
+  </div>
+</section>
+
+<section id="team" class="alt">
+  <div class="wrap">
+    <h2 class="sec">The Team</h2>
+    <p class="sub">Small, senior-advised, and building in public.</p>
+    <div class="team">
+      <div class="member">
+        <div class="avatar">JA</div>
+        <div>
+          <h3>Joshua Soji Amos</h3><div class="role">Founder &amp; CEO</div>
+          <p>First Class B.Sc. Entrepreneurship (University of Benin, 4.68/5.0); Best Graduating Student, Auchi Polytechnic; First Place &amp; Fellow, Seplat/NNPC YEP 2026; founder of a mentorship initiative serving 200+ students.</p>
+        </div>
+      </div>
+      <div class="member">
+        <div class="avatar">MG</div>
+        <div>
+          <h3>Meryem Gürel</h3><div class="role">Sustainability &amp; Impact Lead (Volunteer)</div>
+          <p>Sustainability and energy-transition professional (Istanbul) leading Agri-Power Hub's first GRI-structured impact report. PhD researcher in Climate Change &amp; Sustainability; advisor on renewable energy in Africa; experienced in IFRS S1/S2 and TCFD sustainability reporting.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <div>
+      <b style="color:#fff">Agri-Power Hub Ltd</b> · RC 9720864 · Benin City, Edo State, Nigeria<br/>
+      <a href="mailto:agripowerhub0@gmail.com">agripowerhub0@gmail.com</a> · +234 816 051 0275 ·
+      <a href="https://www.linkedin.com/in/joshua-soji-4621991a5" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <div>© 2026 Agri-Power Hub Ltd</div>
+  </div>
+</footer>
+
+</body>
+</html>
