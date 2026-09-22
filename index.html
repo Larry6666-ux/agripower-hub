@@ -54,6 +54,7 @@ p.sub{color:var(--grey);max-width:680px;margin-bottom:34px}
 .appcard{background:linear-gradient(135deg,var(--green),var(--deep));color:#fff;border-radius:16px;padding:34px 28px;display:flex;flex-wrap:wrap;gap:22px;align-items:center;justify-content:space-between}
 .appcard h3{font-size:1.35rem;margin-bottom:6px}
 .appcard p{color:#cfe6d5;font-size:.94rem;max-width:520px}
+.waitlist-card{background:#fff;border-radius:16px;padding:20px;box-shadow:0 4px 18px rgba(14,59,33,.08);overflow:hidden}
 footer{background:var(--deep);color:#cfe6d5;padding:34px 0;font-size:.88rem}
 footer .wrap{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center}
 footer a{color:var(--amber);text-decoration:none;font-weight:600}
@@ -75,7 +76,7 @@ footer a{color:var(--amber);text-decoration:none;font-weight:600}
     <button id="burger" onclick="document.getElementById('nl').classList.toggle('open')">☰</button>
     <div class="navlinks" id="nl">
       <a href="#problem">The Problem</a><a href="#model">The Model</a><a href="#pilot">The Pilot</a>
-      <a href="#traction">Traction</a><a href="#platform">Platform</a><a href="#team">Team</a><a href="#contact">Contact</a>
+      <a href="#waitlist">Waitlist</a><a href="#traction">Traction</a><a href="#platform">Platform</a><a href="#team">Team</a><a href="#contact">Contact</a>
     </div>
   </div>
 </nav>
@@ -85,7 +86,7 @@ footer a{color:var(--amber);text-decoration:none;font-weight:600}
     <h1>Solar-powered processing hubs,<br>inside the village.</h1>
     <p class="lead">Agri-Power Hub builds pay-per-use cassava processing hubs for smallholder farmers in Nigeria — no diesel, no long journeys, no machines to buy. Farmers pay per kilogram processed, and keep more of what they grow.</p>
     <div class="btns">
-      <a class="btn btn-a" href="#contact">Work With Us</a>
+      <a class="btn btn-a" href="#waitlist">Join the Waitlist</a>
       <a class="btn btn-b" href="#platform">See the Platform</a>
     </div>
     <div class="stats">
@@ -136,7 +137,25 @@ footer a{color:var(--amber);text-decoration:none;font-weight:600}
   </div>
 </section>
 
-<section id="traction" class="alt">
+<section id="waitlist" class="alt">
+  <div class="wrap">
+    <h2 class="sec">Join the Pilot Waitlist</h2>
+    <p class="sub">Whether you are a farmer, cooperative, processing hub, buyer, transporter, or partner/investor, sign up to get early access to our pilot operations.</p>
+    <div class="waitlist-card">
+      <iframe 
+        src="https://docs.google.com/forms/d/e/1FAIpQLSe3vFAs0EZYMxF-qJzFY_RCmkVuqniLH2NJbaKC8pKOSHEhjA/viewform?embedded=true" 
+        width="100%" 
+        height="850" 
+        frameborder="0" 
+        marginheight="0" 
+        marginwidth="0">
+        Loading form…
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<section id="traction">
   <div class="wrap">
     <h2 class="sec">What Exists Today</h2>
     <p class="sub">Said plainly, because records are reputation.</p>
@@ -149,7 +168,7 @@ footer a{color:var(--amber);text-decoration:none;font-weight:600}
   </div>
 </section>
 
-<section id="platform">
+<section id="platform" class="alt">
   <div class="wrap">
     <div class="appcard">
       <div>
@@ -161,7 +180,7 @@ footer a{color:var(--amber);text-decoration:none;font-weight:600}
   </div>
 </section>
 
-<section id="team" class="alt">
+<section id="team">
   <div class="wrap">
     <h2 class="sec">The Team</h2>
     <p class="sub">Small, senior-advised, and building in public.</p>
