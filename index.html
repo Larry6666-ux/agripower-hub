@@ -5,13 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Agri-Power Hub — Affordable Solar Agro-Processing for Rural Farming Communities</title>
 <meta name="description" content="Agri-Power Hub provides fee-for-service, solar-powered cassava processing hubs for smallholder farmers in Nigeria — eliminating fuel dependence and creating lasting economic value. Join the pilot waitlist.">
-<script>document.documentElement.classList.add('js');</script>
+<script>if('IntersectionObserver' in window&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.classList.add('js')}</script>
 <meta name="theme-color" content="#0c3524">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Agri-Power Hub — Solar Agro-Processing for Rural Nigeria">
 <meta property="og:description" content="Fee-for-service, solar-powered cassava processing hubs for smallholder farmers. Zero diesel. Pay per kilogram. Pilot hub: Evbuwa, Edo State.">
 <meta property="og:url" content="https://larry6666-ux.github.io/agripower-hub/">
 <meta property="og:image" content="https://larry6666-ux.github.io/agripower-hub/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:alt" content="Agri-Power Hub — solar-powered cassava processing hubs for rural farming communities in Nigeria">
+<meta name="twitter:image" content="https://larry6666-ux.github.io/agripower-hub/og-image.png">
+<meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="apple-touch-icon" href="icon-180.png">
 <link rel="canonical" href="https://larry6666-ux.github.io/agripower-hub/">
@@ -57,7 +63,7 @@ nav{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.97);backdrop-f
 .hero p.lead{color:#cfe3d6;font-size:1.08rem;max-width:540px;margin-bottom:28px}
 .hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
 .hubcard{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:14px;padding:26px;backdrop-filter:blur(4px)}
-.hubcard h3{color:#fff;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,.18)}
+.hubcard h2{color:#fff;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,.18)}
 .specgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .spec{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:12px 14px}
 .spec b{display:block;color:var(--gold2);font-size:1.02rem}
@@ -151,6 +157,7 @@ footer li{list-style:none;margin-bottom:8px}
 .js .reveal{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease}
 .reveal.in{opacity:1;transform:none}
 h1,h2,h3{text-wrap:balance}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1!important;transform:none!important;transition:none!important}html{scroll-behavior:auto}}
 @media(max-width:960px){
  .hero-in{grid-template-columns:1fr;padding:64px 0 56px}
  .hubcard{max-width:520px;margin:0 auto}
@@ -182,7 +189,7 @@ h1,h2,h3{text-wrap:balance}
       <svg viewBox="0 0 44 44" aria-hidden="true"><g stroke="#0c3524" stroke-width="2.4" stroke-linecap="round"><line x1="22" y1="3" x2="22" y2="8"/><line x1="22" y1="36" x2="22" y2="41"/><line x1="3" y1="22" x2="8" y2="22"/><line x1="36" y1="22" x2="41" y2="22"/><line x1="8.6" y1="8.6" x2="12.2" y2="12.2"/><line x1="31.8" y1="31.8" x2="35.4" y2="35.4"/><line x1="35.4" y1="8.6" x2="31.8" y2="12.2"/><line x1="12.2" y1="31.8" x2="8.6" y2="35.4"/></g><circle cx="22" cy="22" r="7.5" fill="#d99a2b"/><g fill="#14532d"><ellipse cx="14.5" cy="35" rx="3.4" ry="1.5" transform="rotate(-52 14.5 35)"/><ellipse cx="11" cy="30" rx="3.4" ry="1.5" transform="rotate(-38 11 30)"/><ellipse cx="8.8" cy="24.5" rx="3.4" ry="1.5" transform="rotate(-18 8.8 24.5)"/><ellipse cx="29.5" cy="35" rx="3.4" ry="1.5" transform="rotate(52 29.5 35)"/><ellipse cx="33" cy="30" rx="3.4" ry="1.5" transform="rotate(38 33 30)"/><ellipse cx="35.2" cy="24.5" rx="3.4" ry="1.5" transform="rotate(18 35.2 24.5)"/></g></svg>
       AGRI-<b>POWER</b> HUB
     </a>
-    <button id="burger" aria-label="Menu" aria-expanded="false" onclick="var n=document.getElementById('nl');this.setAttribute('aria-expanded',n.classList.toggle('open'))">☰</button>
+    <button id="burger" aria-label="Menu" aria-expanded="false" aria-controls="nl" onclick="var n=document.getElementById('nl');this.setAttribute('aria-expanded',n.classList.toggle('open'))">☰</button>
     <div class="navlinks" id="nl">
       <a href="#model">The Model</a>
       <a href="#hub">The Hub</a>
@@ -210,7 +217,7 @@ h1,h2,h3{text-wrap:balance}
     </div>
     <aside class="hubcard" id="hub">
       <span class="hubtag">Featured Project</span>
-      <h3>The Evbuwa Hub</h3>
+      <h2>The Evbuwa Hub</h2>
       <div class="specgrid">
         <div class="spec"><b>2 t/day</b><span>Design capacity</span></div>
         <div class="spec"><b>Per kg</b><span>Pay-as-you-process</span></div>
